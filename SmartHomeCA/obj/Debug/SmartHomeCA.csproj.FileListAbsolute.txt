@@ -1,0 +1,10 @@
+c:\users\kevin\documents\visual studio 2015\Projects\SmartHomeCA\SmartHomeCA\bin\Debug\SmartHomeCA.exe.config
+c:\users\kevin\documents\visual studio 2015\Projects\SmartHomeCA\SmartHomeCA\bin\Debug\SmartHomeCA.exe
+c:\users\kevin\documents\visual studio 2015\Projects\SmartHomeCA\SmartHomeCA\bin\Debug\SmartHomeCA.pdb
+c:\users\kevin\documents\visual studio 2015\Projects\SmartHomeCA\SmartHomeCA\obj\Debug\SmartHomeCA.exe
+c:\users\kevin\documents\visual studio 2015\Projects\SmartHomeCA\SmartHomeCA\obj\Debug\SmartHomeCA.pdb
+c:\users\kevin\documents\visual studio 2015\Projects\SmartHomeCA\SmartHomeCA\obj\Debug\SmartHomeCA.csprojResolveAssemblyReference.cache
+c:\users\kevin\documents\visual studio 2015\Projects\SmartHomeCA\SmartHomeCA\bin\Debug\Newtonsoft.Json.dll
+c:\users\kevin\documents\visual studio 2015\Projects\SmartHomeCA\SmartHomeCA\bin\Debug\System.Net.Http.Formatting.dll
+c:\users\kevin\documents\visual studio 2015\Projects\SmartHomeCA\SmartHomeCA\bin\Debug\Newtonsoft.Json.xml
+c:\users\kevin\documents\visual studio 2015\Projects\SmartHomeCA\SmartHomeCA\bin\Debug\System.Net.Http.Formatting.xml
