@@ -84,6 +84,7 @@ namespace SmartHomeCA
                 default:
                     break;
             }
+
             return temp;
         }
 
@@ -127,6 +128,7 @@ namespace SmartHomeCA
                 catch (Exception e)
                 {
                     Console.WriteLine(e.Message);
+                    break;
                 }
             }
 
