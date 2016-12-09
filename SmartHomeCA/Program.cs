@@ -95,7 +95,7 @@ namespace SmartHomeCA
 
         static async Task RunAsync()
         {
-            client.BaseAddress = new Uri("http://localhost:a58335/");
+            client.BaseAddress = new Uri("http://localhost:58335/");
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             for (;;)
