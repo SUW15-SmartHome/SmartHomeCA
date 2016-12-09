@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace SmartHomeCA
 {
-    public class Temp
+    public class Temperature
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -22,26 +22,26 @@ namespace SmartHomeCA
         static HttpClient client = new HttpClient();
         
 
-        static async Task<Temp> UpdateTempAsync(Temp temp)
+        static async Task<Temperature> UpdateTempAsync(Temperature temp)
         {
-            HttpResponseMessage response = await client.PutAsJsonAsync($"api/TempsAPI/{temp.Id}", temp);
+            HttpResponseMessage response = await client.PutAsJsonAsync($"api/TemperaturesAPI/{temp.Id}", temp);
             response.EnsureSuccessStatusCode();
 
             // Deserialize the updated product from the response body.
-            temp = await response.Content.ReadAsAsync<Temp>();
+            temp = await response.Content.ReadAsAsync<Temperature>();
 
             return temp;
         }
 
-        static async Task<List<Temp>> GetAllTempsAsync()
+        static async Task<List<Temperature>> GetAllTempsAsync()
         {
-            List<Temp> temps = new List<Temp>();
+            List<Temperature> temps = new List<Temperature>();
             
-            HttpResponseMessage response = client.GetAsync(client.BaseAddress + "api/TempsAPI").Result;  // Blocking call!
+            HttpResponseMessage response = client.GetAsync(client.BaseAddress + "api/TemperaturesAPI").Result;  // Blocking call!
             if (response.IsSuccessStatusCode)
             {
                 // Parse the response body. Blocking!
-                var dataObjects = response.Content.ReadAsAsync<IEnumerable<Temp>>().Result;
+                var dataObjects = response.Content.ReadAsAsync<IEnumerable<Temperature>>().Result;
                 foreach (var d in dataObjects)
                 {
                     temps.Add(d);
@@ -55,7 +55,7 @@ namespace SmartHomeCA
             return temps;
         }
 
-        static Temp UpdateTempValue(Temp temp)
+        static Temperature UpdateTempValue(Temperature temp)
         {
             Random rnd = new Random();
             int dice = rnd.Next(1, 4);
@@ -95,7 +95,7 @@ namespace SmartHomeCA
 
         static async Task RunAsync()
         {
-            client.BaseAddress = new Uri("http://localhost:58335/");
+            client.BaseAddress = new Uri("http://localhost:a58335/");
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             for (;;)
