@@ -110,8 +110,12 @@ namespace SmartHomeCA
                     {
                         for (int i = 0; i < temps.Count; i++)
                         {
-                            var newTemp = UpdateTempValue(temps[i]);
-                            await UpdateTempAsync(temps[i]);
+                            if (temps[i].Status != false)
+                            {
+                                var newTemp = UpdateTempValue(temps[i]);
+                                await UpdateTempAsync(newTemp);
+                            }
+
                             Console.WriteLine(temps[i].Value);
                             Thread.Sleep(1000);
                         }
