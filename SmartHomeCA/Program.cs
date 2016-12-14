@@ -114,11 +114,8 @@ namespace SmartHomeCA
                             {
                                 var newTemp = UpdateTempValue(temps[i]);
                                 await UpdateTempAsync(newTemp);
-                                Console.WriteLine(newTemp.Status);
+                                Console.WriteLine(newTemp.Value);
                             }
-
-                            
-                            Thread.Sleep(1000);
                         }
                     }
                     else
@@ -127,7 +124,7 @@ namespace SmartHomeCA
                         break;
                     }
 
-
+                    Thread.Sleep(5000);
                     Console.WriteLine("***************************");
                 }
                 catch (Exception e)
